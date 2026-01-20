@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fff8f0;
+  color: #333;
+}
+
+/* HEADER */
+.header {
+  background: #ff6f00;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+}
+
+.header p {
+  font-size: 14px;
+}
+
+/* CONTENT */
+.content {
+  padding: 15px;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+  display: block;
+  width: 90%;
+  margin: 20px auto;
+  padding: 15px;
+  text-align: center;
+  background: #25D366;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .content h2 {
+    font-size: 20px;
+  }
+}
