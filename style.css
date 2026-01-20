@@ -61,3 +61,27 @@ body {
     font-size: 20px;
   }
 }
+.pista {
+  background-image: url("images/pista.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+}
+.pista::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+}
+
+.pista * {
+  position: relative;
+  z-index: 1;
+}
+.flavour-card {
+  height: 180px;
+  border-radius: 12px;
+}
