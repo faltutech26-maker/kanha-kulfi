@@ -6,7 +6,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #ff4ecd, #4cc9f0);
+  background: linear-gradient(135deg, rgb(189, 26, 195), #a92e3e);
   color: white;
 }
 
@@ -14,7 +14,7 @@ body {
 .header {
   text-align: center;
   padding: 25px;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(69, 3, 53, 0.25);
 }
 
 .header h1 {
@@ -122,6 +122,18 @@ body {
 .dryfruit {
   background: url("images/image/dryfruit.jpg") center/cover no-repeat;
 }
+.gava {
+  background: url("images/image/gava.jpg") center/cover no-repeat;
+}
+.jamun{
+  background: url("images/image/jamun.jpg") center/cover no-repeat;
+}
+.banana {
+background: url("images/image/banana.jpg") center/cover no-repeat;
+}
+.mava { 
+  background: url("images/image/mava.jpg") center/cover no-repeat;
+}
 
 /* FOOTER */
 footer {
@@ -141,3 +153,4 @@ footer {
     font-size: 22px;
   }
 }
+
