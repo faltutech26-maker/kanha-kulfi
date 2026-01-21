@@ -6,115 +6,138 @@
 }
 
 body {
-  background: #fff8f0;
-  color: #333;
+  background: linear-gradient(135deg, #ff4ecd, #4cc9f0);
+  color: white;
 }
 
 /* HEADER */
 .header {
-  background: #ff6f00;
-  color: white;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .header h1 {
-  font-size: 28px;
+  font-size: 34px;
 }
 
 .header p {
   font-size: 14px;
 }
 
-/* CONTENT */
-.content {
-  padding: 15px;
+/* HERO */
+.hero {
   text-align: center;
+  padding: 30px 15px;
 }
 
-.content h2 {
-  font-size: 22px;
+.hero h2 {
+  font-size: 28px;
   margin-bottom: 10px;
 }
 
-/* WHATSAPP BUTTON */
 .whatsapp {
-  display: block;
-  width: 90%;
-  margin: 20px auto;
-  padding: 15px;
-  text-align: center;
-  background: #25D366;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 28px;
+  background: #25d366;
   color: white;
-  font-size: 18px;
   text-decoration: none;
-  border-radius: 8px;
+  font-size: 18px;
+  border-radius: 30px;
 }
 
-/* 📱 MOBILE RESPONSIVE */
-@media (max-width: 600px) {
-  .header h1 {
-    font-size: 24px;
-  }
-
-  .content h2 {
-    font-size: 20px;
-  }
-}
-.pista {
-  background-image: url("images/image/pista.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  position: relative;
-}
-.pista::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 12px;
+/* SECTION */
+.section {
+  padding: 30px 15px;
 }
 
+.section h3 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
 
 .flavour-card {
   height: 180px;
   padding: 15px;
-  border-radius: 12px;
+  border-radius: 14px;
+  position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-  .pista {
-  background-image: url("images/image/pista.jpg");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  position: relative;
-}
-  
 
-
-.mango {
-  background-image: url("images/image/mango.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  position: relative;
-}
-.mango::before {
+.flavour-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.45);
 }
 
-.mango * {
+.flavour-card * {
   position: relative;
   z-index: 1;
 }
-.flavor-card {
-  height: 180px;
-  border-radius: 12px;
+
+.flavour-card h4 {
+  margin-bottom: 5px;
+}
+
+.price {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.flavour-card button {
+  background: #ff4ecd;
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* BACKGROUND IMAGES */
+.pista {
+  background: url("images/image/pista.jpg") center/cover no-repeat;
+}
+
+.mango {
+  background: url("images/image/mango.jpg") center/cover no-repeat;
+}
+
+.gulkand {
+  background: url("images/image/gulkand.jpg") center/cover no-repeat;
+}
+
+.dryfruit {
+  background: url("images/image/dryfruit.jpg") center/cover no-repeat;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 26px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
 }

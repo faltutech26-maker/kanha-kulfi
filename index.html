@@ -1,207 +1,73 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KANHA Kulfi – A Product of Agrofuels</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KANHA Kulfi – Agrofuels</title>
 
-  <style>
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg,#ff4ecd,#4cc9f0);
-      color:#fff;
-    }
-    header{
-      padding:20px;
-      text-align:center;
-      background:rgba(0,0,0,0.2);
-    }
-    header h1{
-      margin:0;
-      font-size:36px;
-      letter-spacing:2px;
-    }
-    header p{
-      margin:5px 0 0;
-      font-size:16px;
-    }
-    .container{
-      max-width:1100px;
-      margin:auto;
-      padding:20px;
-    }
-    .hero{
-      text-align:center;
-      margin:30px 0;
-    }
-    .hero h2{
-      font-size:32px;
-      margin-bottom:10px;
-    }
-    .hero button{
-      background:#000;
-      color:#fff;
-      border:none;
-      padding:14px 28px;
-      font-size:18px;
-      border-radius:30px;
-      cursor:pointer;
-    }
-    .section{
-      margin:50px 0;
-    }
-    .section h3{
-      text-align:center;
-      font-size:28px;
-      margin-bottom:20px;
-    }
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:20px;
-    }
-    .card{
-      background:#fff;
-      color:#000;
-      border-radius:20px;
-      padding:20px;
-      text-align:center;
-    }
-    .card h4{
-      margin-top:0;
-    }
-    .price{
-      font-weight:bold;
-      margin:10px 0;
-    }
-    .card button{
-      background:#ff4ecd;
-      color:#fff;
-      border:none;
-      padding:10px 18px;
-      border-radius:20px;
-      cursor:pointer;
-    }
-    .order-form{
-      max-width:500px;
-      margin:20px auto;
-      background:#fff;
-      color:#000;
-      padding:25px;
-      border-radius:20px;
-    }
-    .order-form input,.order-form select{
-      width:100%;
-      padding:10px;
-      margin-bottom:12px;
-      border-radius:10px;
-      border:1px solid #ccc;
-    }
-    .order-form button{
-      width:100%;
-      background:#000;
-      color:#fff;
-      border:none;
-      padding:12px;
-      font-size:16px;
-      border-radius:25px;
-      cursor:pointer;
-    }
-    footer{
-      text-align:center;
-      padding:15px;
-      background:rgba(0,0,0,0.3);
-      font-size:14px;
-    }
-  </style>
+  <!-- CSS FILE LINK -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<h1 style="color:red">TEST UPDATE</h1>
+
 <header class="header">
   <h1>KANHA Kulfi</h1>
   <p>A Product of Agrofuels</p>
 </header>
 
-<div class="content">
+<section class="hero">
+  <h2>खरी कुल्फी • खरी ठंडक</h2>
+  <p>Pure Milk • Traditional Taste</p>
 
-  <div class="hero">
-    <p>खरी कुल्फी खरी ठंडक</p>
-    <h2>Pure Milk • Traditional Taste • Colorful Kulfi</h2>
-    <a href="https://wa.me/9130585984" class="Whatsapp">
-      Order NOW
-    </a>
-  </div>
+  <a class="whatsapp" href="https://wa.me/9130584984" target="_blank">
+    Order on WhatsApp
+  </a>
+</section>
 
-  <div class="section">
-    <h3>Our Flavours</h3>
-    <div class="cards">
-      <div class="flavour-card pista">
-        <h4>Pista Kulfi</h4>
-        <div class="price">₹25 / piece</div>
-        <button onclick="orderWhatsapp('pista Kulfi')">Order</button>
-      </div>
-      <div class="flavour-card mango">
-        <h4>Mango Kulfi</h4>
-        <div class="price">₹25 / piece</div>
-        <button onclick="orderWhatsapp('Mango Kulfi')">Order</button>
-      </div>
-      <div class="card">
-        <h4>Gulkand Kulfi</h4>
-        <div class="price">₹25 / piece</div>
-        <button onclick="orderWhatsapp('Gulkand Kulfi')">Order</button>
-      </div>
-      <div class="card">
-        <h4>Dryfruit Special</h4>
-        <div class="price">₹35 / piece</div>
-        <button onclick="orderWhatsapp('Dryfruit Kulfi')">Order</button>
-      </div>
+<section class="section">
+  <h3>Our Flavours</h3>
+
+  <div class="cards">
+    <div class="flavour-card pista">
+      <h4>Pista Kulfi</h4>
+      <div class="price">₹25 / piece</div>
+      <button onclick="orderWhatsApp('Pista Kulfi')">Order</button>
+    </div>
+
+    <div class="flavour-card mango">
+      <h4>Mango Kulfi</h4>
+      <div class="price">₹25 / piece</div>
+      <button onclick="orderWhatsApp('Mango Kulfi')">Order</button>
+    </div>
+
+    <div class="flavour-card gulkand">
+      <h4>Gulkand Kulfi</h4>
+      <div class="price">₹25 / piece</div>
+      <button onclick="orderWhatsApp('Gulkand Kulfi')">Order</button>
+    </div>
+
+    <div class="flavour-card dryfruit">
+      <h4>Dryfruit Kulfi</h4>
+      <div class="price">₹35 / piece</div>
+      <button onclick="orderWhatsApp('Dryfruit Kulfi')">Order</button>
     </div>
   </div>
-
-  <div class="section">
-    <h3>Quick Order Form</h3>
-    <form class="order-form" onsubmit="sendFormOrder(); return false;">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="tel" id="mobile" placeholder="Mobile Number" required>
-      <select id="flavour" required>
-        <option value="">Select Flavour</option>
-        <option>Pista</option>
-        <option>Mango</option>
-        <option>Gulkand</option>
-        <option>Dryfruit</option>
-      </select>
-      <input type="number" id="qty" placeholder="Quantity" required>
-      <button type="submit">Send Order on WhatsApp</button>
-    </form>
-  </div>
-
-</div>
+</section>
 
 <footer>
-  © 2026 KANHAI Kulfi | Agrofuels Farmers Producer Company
+  © 2026 KANHA Kulfi | Agrofuels Farmers Producer Company
 </footer>
 
 <script>
-  const phone = "9130584984"; // apna WhatsApp number yahan daalo
+  const phone = "9130584984";
 
-  function orderWhatsapp(item){
-    const msg = `Hello, I want to order ${item} from KANHAI Kulfi.`;
-    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,'_blank');
-  }
-
-  function sendFormOrder(){
-    const name = document.getElementById('name').value;
-    const mobile = document.getElementById('mobile').value;
-    const flavour = document.getElementById('flavour').value;
-    const qty = document.getElementById('qty').value;
-
-    const msg = `Hello, I want to order KANHAI Kulfi.%0AName: ${name}%0AMobile: ${mobile}%0AFlavour: ${flavour}%0AQuantity: ${qty}`;
-    window.open(`https://wa.me/${phone}?text=${msg}`,'_blank');
+  function orderWhatsApp(item) {
+    const msg = `Hello, I want to order ${item} from KANHA Kulfi.`;
+    window.open(
+      `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,
+      "_blank"
+    );
   }
 </script>
 
