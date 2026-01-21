@@ -62,7 +62,7 @@ body {
   }
 }
 .pista {
-  background-image: url("images/pista.jpg");
+  background-image: url("images/image/pista.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -77,11 +77,44 @@ body {
   border-radius: 12px;
 }
 
-.pista * {
+
+.flavour-card {
+  height: 180px;
+  padding: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+  .pista {
+  background-image: url("images/image/pista.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+  
+
+
+.mango {
+  background-image: url("images/image/mango.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+}
+.mango::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+}
+
+.mango * {
   position: relative;
   z-index: 1;
 }
-.flavour-card {
+.flavor-card {
   height: 180px;
   border-radius: 12px;
 }

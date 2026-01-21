@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<h1 style="color:red">TEST UPDATE</h1>
 
 <html lang="en">
+  
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -120,7 +121,7 @@
   </style>
 </head>
 <body>
-
+<h1 style="color:red">TEST UPDATE</h1>
 <header class="header">
   <h1>KANHA Kulfi</h1>
   <p>A Product of Agrofuels</p>
@@ -131,7 +132,7 @@
   <div class="hero">
     <p>खरी कुल्फी खरी ठंडक</p>
     <h2>Pure Milk • Traditional Taste • Colorful Kulfi</h2>
-    <a href="https://wa.me/9130585984" class="WhatsApp">
+    <a href="https://wa.me/9130585984" class="Whatsapp">
       Order NOW
     </a>
   </div>
@@ -141,23 +142,23 @@
     <div class="cards">
       <div class="flavour-card pista">
         <h4>Pista Kulfi</h4>
-        <div class="price">₹20 / piece</div>
-        <button onclick="orderWhatsApp('pista Kulfi')">Order</button>
+        <div class="price">₹25 / piece</div>
+        <button onclick="orderWhatsapp('pista Kulfi')">Order</button>
       </div>
-      <div class="card">
+      <div class="flavour-card mango">
         <h4>Mango Kulfi</h4>
-        <div class="price">₹20 / piece</div>
-        <button onclick="orderWhatsApp('Mango Kulfi')">Order</button>
+        <div class="price">₹25 / piece</div>
+        <button onclick="orderWhatsapp('Mango Kulfi')">Order</button>
       </div>
       <div class="card">
         <h4>Gulkand Kulfi</h4>
-        <div class="price">₹20 / piece</div>
-        <button onclick="orderWhatsApp('Gulkand Kulfi')">Order</button>
+        <div class="price">₹25 / piece</div>
+        <button onclick="orderWhatsapp('Gulkand Kulfi')">Order</button>
       </div>
       <div class="card">
         <h4>Dryfruit Special</h4>
-        <div class="price">₹25 / piece</div>
-        <button onclick="orderWhatsApp('Dryfruit Kulfi')">Order</button>
+        <div class="price">₹35 / piece</div>
+        <button onclick="orderWhatsapp('Dryfruit Kulfi')">Order</button>
       </div>
     </div>
   </div>
@@ -188,7 +189,7 @@
 <script>
   const phone = "9130584984"; // apna WhatsApp number yahan daalo
 
-  function orderWhatsApp(item){
+  function orderWhatsapp(item){
     const msg = `Hello, I want to order ${item} from KANHAI Kulfi.`;
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,'_blank');
   }
