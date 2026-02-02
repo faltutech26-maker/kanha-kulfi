@@ -11,11 +11,18 @@
 
 <body>
 
-
 <header class="header">
   <h1>कान्हा कुल्फी</h1>
   <p>A Product of Agrofuels</p>
 </header>
+<!-- VERTICAL NAV 
+  <div class="sidebar">
+    <h2 class="logo">AGROFUELS</h2>
+    <a href="#">Home</a>
+    <a href="#">Login</a>
+    <a href="#">About Us</a>
+    <a href="#">More</a>
+  </div> -->
 
 
 <section class="hero">
@@ -91,6 +98,43 @@
       "_blank"
     );
   }
+  
+const SHEET_URL = "PASTE_YOUR_SHEETBEST_API_LINK_HERE";
+
+async function sendFormOrder(){
+  const area = document.getElementById("area").value;
+  const flavour = document.getElementById("flavour").value;
+  const qty = document.getElementById("qty").value;
+
+  if(!area || !flavour || !qty){
+    alert("Please fill all fields");
+    return;
+  }
+
+  const res = await fetch(SHEET_URL);
+  const data = await res.json();
+
+  const shopkeeper = data.find(row => row.area === area);
+
+  if(!shopkeeper){
+    alert("Shopkeeper not found for this area");
+    return;
+  }
+
+  const msg =
+    `KANHA Kulfi Order%0A` +
+    `Area: ${area}%0A` +
+    `Flavour: ${flavour}%0A` +
+    `Quantity: ${qty}`;
+
+  window.open(
+    `https://wa.me/${shopkeeper.mobile}?text=${msg}`,
+    "_blank"
+  );
+}
+</script>
+
+
 </script>
 
 </body>

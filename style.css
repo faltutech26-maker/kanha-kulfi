@@ -6,7 +6,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, rgb(189, 26, 195), #a92e3e);
+  background: linear-gradient(135deg, rgb(253, 250, 253), #f0f0ef);
   color: white;
 }
 
@@ -14,7 +14,7 @@ body {
 .header {
   text-align: center;
   padding: 25px;
-  background: rgba(69, 3, 53, 0.25);
+  background: rgba(240, 234, 238, 0.25);
 }
 
 .header h1 {
@@ -153,4 +153,77 @@ footer {
     font-size: 22px;
   }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* SIDEBAR 
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #0e0f0e;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-top: 20px;
+}
+
+.sidebar .logo {
+  color: #ff6f00;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+}
+
+.sidebar a:hover {
+  background: #ff6f00;
+}*/
+
+/* MAIN CONTENT */
+.main {
+  margin-left: 220px;
+  padding: 20px;
+  background: #fff8f0;
+  min-height: 100vh;
+}
+
+.main h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.whatsapp {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+}
+
 
