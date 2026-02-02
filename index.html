@@ -88,6 +88,7 @@
   © 2026 KANHA Kulfi | Agrofuels Farmers Producer Company
 </footer>
 
+
 <script>
   const phone = "9130584984";
 
@@ -98,44 +99,47 @@
       "_blank"
     );
   }
-  
-const SHEET_URL = "PASTE_YOUR_SHEETBEST_API_LINK_HERE";
 
-async function sendFormOrder(){
-  const area = document.getElementById("area").value;
-  const flavour = document.getElementById("flavour").value;
-  const qty = document.getElementById("qty").value;
+  const SHEET_URL =
+    "https://script.google.com/macros/s/AKfycbwxv8Oriq0uCJvsjj32mZLvvIwWcHxcZbnRX9eI7szRswqg2I3uHbaFqCwnPgNsZpj1/exec";
 
-  if(!area || !flavour || !qty){
-    alert("Please fill all fields");
-    return;
+  async function sendFormOrder() {
+    const name = document.getElementById("name").value;
+    const area = document.getElementById("area").value;
+    const mobile = document.getElementById("mobile").value;
+    const flavour = document.getElementById("flavour").value;
+    const qty = document.getElementById("qty").value;
+
+    if (!name || !area || !mobile || !flavour || !qty) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    const res = await fetch(SHEET_URL);
+    const data = await res.json();
+
+    const shopkeeper = data.find(row => row.area === area);
+
+    if (!shopkeeper) {
+      alert("Shopkeeper not found for this area");
+      return;
+    }
+
+    const msg =
+      `KANHA Kulfi Order%0A` +
+      `Name: ${name}%0A` +
+      `Customer Mobile: ${mobile}%0A` +
+      `Area: ${area}%0A` +
+      `Flavour: ${flavour}%0A` +
+      `Quantity: ${qty}`;
+
+    window.open(
+      `https://wa.me/${shopkeeper.mobile}?text=${msg}`,
+      "_blank"
+    );
   }
-
-  const res = await fetch(SHEET_URL);
-  const data = await res.json();
-
-  const shopkeeper = data.find(row => row.area === area);
-
-  if(!shopkeeper){
-    alert("Shopkeeper not found for this area");
-    return;
-  }
-
-  const msg =
-    `KANHA Kulfi Order%0A` +
-    `Area: ${area}%0A` +
-    `Flavour: ${flavour}%0A` +
-    `Quantity: ${qty}`;
-
-  window.open(
-    `https://wa.me/${shopkeeper.mobile}?text=${msg}`,
-    "_blank"
-  );
-}
 </script>
 
-
-</script>
 
 </body>
 </html>
