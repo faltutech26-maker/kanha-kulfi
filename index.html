@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KANHA Kulfi – Agrofuels</title>
 
-  <!-- CSS FILE LINK -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,25 +14,13 @@
   <h1>कान्हा कुल्फी</h1>
   <p>A Product of Agrofuels</p>
 </header>
-<!-- VERTICAL NAV 
-  <div class="sidebar">
-    <h2 class="logo">AGROFUELS</h2>
-    <a href="#">Home</a>
-    <a href="#">Login</a>
-    <a href="#">About Us</a>
-    <a href="#">More</a>
-  </div> -->
-
 
 <section class="hero">
   <h2>खाओ तो जानो</h2>
   <p>Pure Milk • Traditional Taste</p>
-
-  <a class="whatsapp" href="https://wa.me/9130584984" target="_blank">
-    Order on WhatsApp
-  </a>
 </section>
 
+<!-- ✅ Flavours -->
 <section class="section">
   <h3>Our Flavours</h3>
 
@@ -41,108 +28,25 @@
     <div class="flavour-card pista">
       <h4>Pista Kulfi</h4>
       <div class="price">₹25 / piece</div>
-      <button onclick="orderWhatsApp('Pista Kulfi')">Order</button>
     </div>
 
     <div class="flavour-card mango">
       <h4>Mango Kulfi</h4>
       <div class="price">₹25 / piece</div>
-      <button onclick="orderWhatsApp('Mango Kulfi')">Order</button>
-    </div>
-
-    <div class="flavour-card gulkand">
-      <h4>Gulkand Kulfi</h4>
-      <div class="price">₹25 / piece</div>
-      <button onclick="orderWhatsApp('Gulkand Kulfi')">Order</button>
     </div>
 
     <div class="flavour-card dryfruit">
       <h4>Dryfruit Kulfi</h4>
       <div class="price">₹35 / piece</div>
-      <button onclick="orderWhatsApp('Dryfruit Kulfi')">Order</button>
-    </div>
-    <div class="flavour-card gava">
-      <h4>gava</h4>
-      <div class="price">₹35 / piece</div>
-      <button onclick="orderWhatsApp('gava Kulfi')">Order</button>
-    </div>
-    <div class="flavour-card jamun">
-      <h4>jamun Kulfi</h4>
-      <div class="price">₹35 / piece</div>
-      <button onclick="orderWhatsApp('jamun Kulfi')">Order</button>
-    </div>
-    <div class="flavour-card banana">
-      <h4>Banana Kulfi</h4>
-      <div class="price">₹35 / piece</div>
-      <button onclick="orderWhatsApp('banana Kulfi')">Order</button>
-    </div>
-    <div class="flavour-card mava">
-      <h4>Speciul mava Kulfi</h4>
-      <div class="price">₹35 / piece</div>
-      <button onclick="orderWhatsApp('mava Kulfi')">Order</button>
     </div>
   </div>
 </section>
 
-<footer>
-  © 2026 KANHA Kulfi | Agrofuels Farmers Producer Company
-</footer>
-
-
-<script>
-  const phone = "9130584984";
-
-  function orderWhatsApp(item) {
-    const msg = `Hello, I want to order ${item} from KANHA Kulfi.`;
-    window.open(
-      `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,
-      "_blank"
-    );
-  }
-
-  const SHEET_URL =
-    "https://script.google.com/macros/s/AKfycbwuAwfPYtdKvKNigNivFY-knJiVZH-SLVIwnVk5kl1l7Tui0Ru93t3fJoHaqiD3SF7V/exec";
-
-  async function sendFormOrder() {
-    const name = document.getElementById("name").value;
-    const area = document.getElementById("area").value;
-    const mobile = document.getElementById("mobile").value;
-    const flavour = document.getElementById("flavour").value;
-    const qty = document.getElementById("qty").value;
-
-    if (!name || !area || !mobile || !flavour || !qty) {
-      alert("Please fill all fields");
-      return;
-    }
-      // save order in google sheet 
-    const res = await fetch(SHEET_URL);
-    const data = await res.json();
-
-    const shopkeeper = data.find(row => row.area === area);
-
-    if (!shopkeeper) {
-      alert("Shopkeeper not found for this area");
-      return;
-    }
-
-    const msg =
-      `KANHA Kulfi Order%0A` +
-      `Name: ${name}%0A` +
-      `Customer Mobile: ${mobile}%0A` +
-      `Area: ${area}%0A` +
-      `Flavour: ${flavour}%0A` +
-      `Quantity: ${qty}`;
-
-    window.open(
-      `https://wa.me/${shopkeeper.mobile}?text=${msg}`,
-      "_blank"
-    );
-  }
-</script>
+<!-- ✅ ORDER FORM -->
 <h2 style="text-align:center;">KANHA Kulfi Order Form</h2>
 
 <form class="order-form" onsubmit="sendFormOrder(); return false;">
-  
+
   <input type="text" id="name" placeholder="Customer Name" required>
 
   <input type="text" id="area" placeholder="Area / Location" required>
@@ -153,7 +57,6 @@
     <option value="">Select Flavour</option>
     <option value="Pista">Pista</option>
     <option value="Mango">Mango</option>
-    <option value="Gulkand">Gulkand</option>
     <option value="Dryfruit">Dryfruit</option>
   </select>
 
@@ -163,9 +66,16 @@
 
 </form>
 
-<script>
+<footer>
+  © 2026 KANHA Kulfi | Agrofuels Farmers Producer Company
+</footer>
 
-async function sendFormOrder(){
+<!-- ✅ JavaScript Always At Bottom -->
+<script>
+const SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbwuAwfPYtdKvKNigNivFY-knJiVZH-SLVIwnVk5kl1l7Tui0Ru93t3fJoHaqiD3SF7V/exec";
+
+async function sendFormOrder() {
 
   const name = document.getElementById("name").value;
   const area = document.getElementById("area").value;
@@ -173,36 +83,38 @@ async function sendFormOrder(){
   const flavour = document.getElementById("flavour").value;
   const qty = document.getElementById("qty").value;
 
-  if(!name || !area || !mobile || !flavour || !qty){
+  if (!name || !area || !mobile || !flavour || !qty) {
     alert("Please fill all fields");
     return;
   }
 
-  const res = await fetch(SHEET_URL);
-  const data = await res.json();
+  // ✅ Save order in Google Sheet
+  await fetch(SCRIPT_URL, {
+    method: "POST",
+    body: JSON.stringify({
+      name: name,
+      area: area,
+      mobile: mobile,
+      flavour: flavour,
+      qty: qty
+    })
+  });
 
-  const shopkeeper = data.find(row => row.area === area);
-
-  if(!shopkeeper){
-    alert("Shopkeeper not found for this area");
-    return;
-  }
-
+  // ✅ WhatsApp Message
   const msg =
     `KANHA Kulfi Order%0A` +
     `Name: ${name}%0A` +
     `Area: ${area}%0A` +
     `Mobile: ${mobile}%0A` +
     `Flavour: ${flavour}%0A` +
-    `Quantity: ${qty}`;
+    `Qty: ${qty}`;
 
   window.open(
-    `https://wa.me/${shopkeeper.mobile}?text=${msg}`,
+    `https://wa.me/9130584984?text=${msg}`,
     "_blank"
   );
 }
 </script>
-
 
 </body>
 </html>
