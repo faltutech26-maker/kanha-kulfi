@@ -101,7 +101,7 @@
   }
 
   const SHEET_URL =
-    "https://script.google.com/macros/s/AKfycbwxv8Oriq0uCJvsjj32mZLvvIwWcHxcZbnRX9eI7szRswqg2I3uHbaFqCwnPgNsZpj1/exec";
+    "https://script.google.com/macros/s/AKfycbwuAwfPYtdKvKNigNivFY-knJiVZH-SLVIwnVk5kl1l7Tui0Ru93t3fJoHaqiD3SF7V/exec";
 
   async function sendFormOrder() {
     const name = document.getElementById("name").value;
@@ -114,7 +114,7 @@
       alert("Please fill all fields");
       return;
     }
-
+      // save order in google sheet 
     const res = await fetch(SHEET_URL);
     const data = await res.json();
 
