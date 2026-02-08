@@ -139,6 +139,69 @@
     );
   }
 </script>
+<h2 style="text-align:center;">KANHA Kulfi Order Form</h2>
+
+<form class="order-form" onsubmit="sendFormOrder(); return false;">
+  
+  <input type="text" id="name" placeholder="Customer Name" required>
+
+  <input type="text" id="area" placeholder="Area / Location" required>
+
+  <input type="tel" id="mobile" placeholder="Customer Mobile Number" required>
+
+  <select id="flavour" required>
+    <option value="">Select Flavour</option>
+    <option value="Pista">Pista</option>
+    <option value="Mango">Mango</option>
+    <option value="Gulkand">Gulkand</option>
+    <option value="Dryfruit">Dryfruit</option>
+  </select>
+
+  <input type="number" id="qty" placeholder="Quantity" required>
+
+  <button type="submit">Send Order on WhatsApp</button>
+
+</form>
+
+<script>
+
+async function sendFormOrder(){
+
+  const name = document.getElementById("name").value;
+  const area = document.getElementById("area").value;
+  const mobile = document.getElementById("mobile").value;
+  const flavour = document.getElementById("flavour").value;
+  const qty = document.getElementById("qty").value;
+
+  if(!name || !area || !mobile || !flavour || !qty){
+    alert("Please fill all fields");
+    return;
+  }
+
+  const res = await fetch(SHEET_URL);
+  const data = await res.json();
+
+  const shopkeeper = data.find(row => row.area === area);
+
+  if(!shopkeeper){
+    alert("Shopkeeper not found for this area");
+    return;
+  }
+
+  const msg =
+    `KANHA Kulfi Order%0A` +
+    `Name: ${name}%0A` +
+    `Area: ${area}%0A` +
+    `Mobile: ${mobile}%0A` +
+    `Flavour: ${flavour}%0A` +
+    `Quantity: ${qty}`;
+
+  window.open(
+    `https://wa.me/${shopkeeper.mobile}?text=${msg}`,
+    "_blank"
+  );
+}
+</script>
 
 
 </body>
